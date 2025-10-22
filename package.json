@@ -1,0 +1,12 @@
+{
+  "name": "pre-entrega-jorge-guillin",
+  "version": "1.0.0",
+  "description": "Proyecto Pre-Entrega Talento Tech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jorge Guillin",
+  "license": "MIT",
+  "type":"module"
+}
