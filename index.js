@@ -10,6 +10,19 @@ let [, , method, resource, ...params] = process.argv;
 method = method.toUpperCase()
 resource = resource.toLowerCase()
 
+
+if (method == 'DELETE' && resource.startsWith("products/")) {
+    const id = parseInt(resource.split("/")[1]);
+
+    fetch(`https://fakestoreapi.com/products/${id}`, {
+        method: 'DELETE'
+    })
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+}
+
+
 if (method == 'PUT' && resource.startsWith("products/")) {
     let id = resource.split("/")[1];
     id = parseInt(id);
